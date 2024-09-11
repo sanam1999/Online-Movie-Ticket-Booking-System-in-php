@@ -2,7 +2,20 @@
 include('config.php');
 session_start();
 date_default_timezone_set('Asia/Kolkata');
+
+$host = '127.0.0.1'; // or 'localhost'
+$username = 'root'; // replace with your MySQL username
+$password = ''; // replace with your MySQL password
+$database = 'db_movie'; // your database name
+
+
+$con = mysqli_connect($host, $username, $password, $database, );
+
+if (!$con) {
+	die('Connection failed: ' . mysqli_connect_error());
+}
 ?>
+
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -73,5 +86,9 @@ function myFunction() {
     else{
         return true;
     }
-    </script>
+ 
 }
+   </script>
+
+  
+   
